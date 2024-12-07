@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حصالتي الإلكترونية - تحديد نوع الهدف</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #8AC54F;
+        }
+        
+        .input-field {
+            border: 2px solid #2C8C00;
+            border-radius: 25px;
+            padding: 10px 20px;
+            width: 100%;
+            background-color: white;
+        }
+        
+        .button {
+            background-color: #2C8C00;
+            color: white;
+            border-radius: 15px;
+            padding: 10px 25px;
+            font-weight: bold;
+        }
+        
+        .curve-top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-color: #8AC54F;
+            border-bottom-left-radius: 50% 100%;
+            border-bottom-right-radius: 50% 100%;
+        }
+        
+        .curve-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-color: #8AC54F;
+            border-top-left-radius: 50% 100%;
+            border-top-right-radius: 50% 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen bg-[#D3EDC5] relative">
+        <!-- Top Curve -->
+        <div class="curve-top"></div>
+
+        <!-- Main Content -->
+        <div class="relative z-10 px-6 py-8 ">
+            <h1 class="text-2xl font-bold text-center mb-8">حصالتي الإلكترونية</h1>
+
+            <!-- White Container -->
+            <div class="bg-white rounded-3xl p-6 shadow-lg mt-20">
+                <!-- Target Goal -->
+                <div class="mb-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <label class="text-right text-lg">تحديد الهدف</label>
+                    </div>
+                    <div class="flex gap-2">
+                        <input type="text" placeholder="سيارة، منزل، الخ..." class="input-field">
+                        <button class="button">تحديد</button>
+                    </div>
+                </div>
+
+                <!-- Add Goal -->
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <label class="text-right text-lg">اضافة هدف</label>
+                    </div>
+                    <div class="flex gap-2">
+                        <input type="text" placeholder="اضافة هدف اخر..." class="input-field">
+                        <button class="button">اضافة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Piggy Bank Image -->
+            <div class="mt-8 text-center">
+                <img src="assets/logo.png" alt="الحصالة الإلكترونية" class="w-32 mx-auto mb-4">
+                <h2 class="text-xl font-bold text-[#2C8C00]">الحصالة الإلكترونية</h2>
+                <p class="text-sm text-[#6DCE40]">Electronic piggy bank</p>
+            </div>
+        </div>
+
+        <!-- Bottom Curve -->
+        <div class="curve-bottom"></div>
+
+        <!-- Navigation Arrows -->
+        <div class="fixed bottom-8 w-full px-6">
+            <div class="flex justify-between">
+                <button class="bg-[#2C8C00] text-white p-3 rounded-full">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M15 19l-7-7 7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="bg-[#2C8C00] text-white p-3 rounded-full">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M9 5l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

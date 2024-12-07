@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول - Google</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #fff;
+        }
+        .google-button {
+            transition: all 0.2s;
+        }
+        .google-button:hover {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen flex flex-col items-center justify-center p-4">
+        <div class="w-full max-w-[450px] p-12 rounded-2xl">
+            <!-- Google Logo -->
+            <div class="text-center mb-6">
+                <img src="assets/google-logo.png" alt="Google" class="h-8 mx-auto mb-8">
+                <h1 class="text-2xl mb-2">تسجيل الدخول</h1>
+                <p class="text-sm text-gray-600">للمتابعة إلى حصالتي الإلكترونية</p>
+            </div>
+
+            <!-- Account Selection -->
+            <div class="space-y-4 mb-8">
+                <div onclick="window.location.href='goal-type.html'" class="google-button flex items-center gap-4 p-4 border rounded-xl cursor-pointer hover:shadow-md">
+                    <img src="assets/user-avatar.png" alt="User Avatar" class="w-10 h-10 rounded-full">
+                    <div>
+                        <p class="font-medium">Batla</p>
+                        <p class="text-sm text-gray-600">Batla@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Options -->
+            <div class="space-y-4">
+                <button class="google-button w-full flex items-center justify-center gap-2 p-3 border rounded-full text-[#1a73e8] hover:bg-blue-50">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                    </svg>
+                    استخدام حساب آخر
+                </button>
+            </div>
+
+            <!-- Footer -->
+            <div class="mt-12 text-center">
+                <button onclick="window.location.href='login.html'" class="text-[#1a73e8] hover:text-blue-700">العودة إلى صفحة تسجيل الدخول</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

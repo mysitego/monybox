@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>انشاء حساب - الحصالة الإلكترونية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#D3EDC5] min-h-screen">
+    <div class="relative w-full h-screen">
+        <!-- Top Curve -->
+        <div class="absolute w-full h-[10%] left-0 top-0">
+            <div class="absolute w-full h-full bg-gradient-to-r from-[#6DCE40] to-[#A5E08A]" style="border-bottom-left-radius: 50% 100%; border-bottom-right-radius: 50% 100%;"></div>
+        </div>
+        
+        <!-- Logo -->
+        <div class="relative z-10 pt-8 pb-4">
+            <img src="assets/logo.png" alt="Logo" class="w-[200px] mx-auto">
+        </div>
+
+        <!-- Signup Form -->
+        <div class="relative z-10 px-6">
+            <h2 class="text-[#8AC54F] text-3xl font-bold text-center mb-8">انشــــاء الحســــاب</h2>
+            
+            <form id="signupForm" class="space-y-4" onsubmit="event.preventDefault(); window.location.href='goal-type.html';">
+                <div class="relative">
+                    <input type="text" name="fullname" placeholder="الاسم الكامل" required class="w-full h-[65px] border border-[#6DCE40] rounded-[18px] pr-12 pl-4 text-[#A5E08A]">
+                    <img src="assets/user-icon.svg" alt="User" class="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6">
+                </div>
+
+                <div class="relative">
+                    <input type="email" name="email" placeholder="الإيميل" required class="w-full h-[65px] border border-[#6DCE40] rounded-[18px] pr-12 pl-4 text-[#A5E08A]">
+                    <img src="assets/email-icon.svg" alt="Email" class="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6">
+                </div>
+
+                <div class="relative">
+                    <input type="password" name="password" placeholder="كلمة المرور" required class="w-full h-[65px] border border-[#6DCE40] rounded-[18px] pr-12 pl-4 text-[#A5E08A]">
+                    <img src="assets/password-icon.svg" alt="Password" class="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6">
+                </div>
+
+                <div class="relative">
+                    <input type="password" name="password_confirm" placeholder="تأكيد كلمة المرور" required class="w-full h-[65px] border border-[#6DCE40] rounded-[18px] pr-12 pl-4 text-[#A5E08A]">
+                    <img src="assets/password-icon.svg" alt="Password Confirm" class="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6">
+                </div>
+
+                <button type="submit" class="w-full h-[49px] bg-gradient-to-r from-[#97D27C] to-[#E3E562] text-white rounded-[18px] font-bold">
+                    انشاء الحساب
+                </button>
+
+                <p class="text-center text-[#2C8C00]"><a href="index.html" target="_self">لدي حساب بالفعل ..</a></p>
+            </form>
+        </div>
+
+        <!-- Bottom Curve -->
+        <div class="absolute w-full h-[10%] left-0 bottom-0">
+            <div class="absolute w-full h-full bg-gradient-to-r from-[#6DCE40] to-[#A5E08A]" style="border-top-left-radius: 50% 100%; border-top-right-radius: 30% 100%;"></div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

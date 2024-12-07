@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حصالتي الإلكترونية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .splash-screen {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#D3EDC5] min-h-screen">
+    <div class="splash-screen relative w-full min-h-screen flex items-center justify-center">
+        <!-- Top Curve -->
+        <div class="absolute w-full h-[10%] left-0 top-0">
+            <div class="absolute w-full h-full bg-gradient-to-r from-[#6DCE40] to-[#A5E08A]" style="border-bottom-left-radius: 50% 100%; border-bottom-right-radius: 50% 100%;"></div>
+        </div>
+
+        <!-- Splash Content -->
+        <div class="relative z-10 text-center">
+            <img src="assets/logo.png" alt="Logo" class="w-[250px] mx-auto mb-8 animate-pulse">
+            <h1 class="text-4xl font-bold text-[#2C8C00] mb-4">حصالتي الإلكترونية</h1>
+            <p class="text-[#6DCE40]">ادخر بذكاء، حقق أهدافك</p>
+        </div>
+
+        <!-- Bottom Curve -->
+        <div class="absolute w-full h-[10%] left-0 bottom-0">
+            <div class="absolute w-full h-full bg-gradient-to-r from-[#6DCE40] to-[#A5E08A]" style="border-top-left-radius: 50% 100%; border-top-right-radius: 50% 100%;"></div>
+        </div>
+    </div>
+
+    <script>
+        // التحقق مما إذا كانت هذه أول زيارة
+        if (!localStorage.getItem('hasVisited')) {
+            // تعيين علامة الزيارة
+            localStorage.setItem('hasVisited', 'true');
+            
+            // الانتقال إلى صفحة تسجيل الدخول بعد ثانيتين
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 2000);
+        } else {
+            // إذا سبق الزيارة، انتقل مباشرة إلى صفحة تسجيل الدخول
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>

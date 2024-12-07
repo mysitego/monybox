@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حصالتي الإلكترونية - تسجيل الدخول</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#D3EDC5] min-h-screen">
+    <div class="relative w-full min-h-screen">
+        <!-- Top Curve -->
+        <div class="absolute w-full h-[10%] left-0 top-0">
+            <div class="absolute w-full h-full bg-gradient-to-r from-[#6DCE40] to-[#A5E08A]" style="border-bottom-left-radius: 50% 100%; border-bottom-right-radius: 50% 100%;"></div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="relative z-10 px-6 pt-8">
+            <!-- Logo -->
+            <div class="relative z-10 pt-8 pb-4">
+                <img src="assets/logo.png" alt="Logo" class="w-[200px] mx-auto">
+            </div>
+
+            <div class="max-w-md mx-auto">
+                <h2 class="text-[#8AC54F] text-3xl font-bold text-center mb-8">تسجيــــل الدخـــــول</h2>
+
+                <form id="loginForm" class="space-y-6">
+                    <div class="relative">
+                        <input type="email" placeholder="ادخل الإيميل الخاص بك" required 
+                               class="w-full h-[65px] border border-[#6DCE40] rounded-[18px] pr-12 pl-4 text-[#A5E08A]">
+                        <img src="assets/email-icon.svg" alt="Email" class="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6">
+                    </div>
+                    
+                    <div class="relative">
+                        <input type="password" placeholder="كلمة المرور" required
+                               class="w-full h-[65px] border border-[#6DCE40] rounded-[18px] pr-12 pl-4 text-[#A5E08A]">
+                        <img src="assets/password-icon.svg" alt="Password" class="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6">
+                    </div>
+
+                    <div class="flex justify-between items-center text-sm text-[#1E1E1E]">
+                        <label class="flex items-center gap-2">
+                            <input type="checkbox" class="w-6 h-6 border border-[#6DCE40] rounded-lg">
+                            <span>تذكرني في المرة القادمة</span>
+                        </label>
+                        <a href="#" class="text-[#1E1E1E] hover:text-[#2C8C00]">نسيت كلمة المرور؟</a>
+                    </div>
+
+                    <button type="submit" class="w-full h-[49px] bg-gradient-to-r from-[#97D27C] to-[#E3E562] text-white rounded-[18px] font-bold hover:from-[#6DCE40] hover:to-[#97D27C] transition-all">
+                        تسجيل الدخول
+                    </button>
+
+                    <p class="text-center">
+                        <a href="signup.html" class="text-[#2C8C00] hover:underline">ليس لدي حساب ؟</a>
+                    </p>
+
+                    <div class="text-center">
+                        <p class="text-[#1E1E1E] mb-4">تسجيل الدخول باستخدام</p>
+                        <div class="flex justify-center gap-4">
+                            <button onclick="window.location.href='google-login.html'" type="button" class="social-login hover:scale-110 transition-transform" data-provider="google">
+                                <img src="assets/google-icon.svg" alt="Google" class="w-7 h-7">
+                            </button>
+                            <button onclick="window.location.href='facebook-login.html'" type="button" class="social-login hover:scale-110 transition-transform" data-provider="facebook">
+                                <img src="assets/facebook-icon.svg" alt="Facebook" class="w-7 h-7">
+                            </button>
+                            <button onclick="window.location.href='apple-login.html'" type="button" class="social-login hover:scale-110 transition-transform" data-provider="apple">
+                                <img src="assets/apple-icon.svg" alt="Apple" class="w-7 h-7">
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Bottom Curve -->
+        <div class="absolute w-full h-[10%] left-0 bottom-0">
+            <div class="absolute w-full h-full bg-gradient-to-r from-[#6DCE40] to-[#A5E08A]" style="border-top-left-radius: 50% 100%; border-top-right-radius: 50% 100%;"></div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
