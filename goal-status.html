@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حصالتي الإلكترونية - تحديد الهدف</title>
+    <title>حصالتي الإلكترونية - حالة الهدف</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -29,6 +29,7 @@
             height: 50px;
             background: #FFFFFF;
             width: 70%;
+            padding-right: 15px;
         }
 
         .action-button {
@@ -38,6 +39,7 @@
             padding: 10px 20px;
             height: 50px;
             width: 25%;
+            font-weight: 500;
         }
 
         .nav-arrow {
@@ -71,14 +73,19 @@
             transform: translateX(-1px);
         }
 
-        .nav-arrow.right::after {
-            content: '';
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 6px 0 6px 8px;
-            border-color: transparent transparent transparent #111010;
-            transform: translateX(1px);
+        .progress-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+        .progress-bar {
+            width: 27%;
+            height: 20px;
+            background-color: #6DCE40;
+            border-radius: 10px;
+            transition: width 0.5s ease-in-out;
         }
 
         .main-content {
@@ -89,6 +96,16 @@
 
         input::placeholder {
             font-family: 'IBM Plex Sans Arabic', sans-serif;
+            color: #ccc;
+        }
+
+        .status-container {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 400px;
+            border: #2C8C00 1px solid;
         }
 
         .curve-image {
@@ -108,7 +125,6 @@
 
         .bottom-curve {
             position: absolute;
-            top:92%;
             bottom: 0;
             left: 0;
             width: 100%;
@@ -134,43 +150,62 @@
     <img src="assets/buttom.svg" alt="" class="curve-image bottom-curve">
 
     <!-- Main Content -->
-    <div class="main-content mt-6">
+    <div class="main-content">
         <!-- Title under top curve -->
         <div class="pt-32 pb-8 text-center">
             <h1 class="text-[32px] font-black text-black">حصالتي الإلكترونية</h1>
         </div>
 
-        <!-- Input Container -->
-        <div class="input-container">
-            <!-- Target Goal -->
-            <div class="mb-6">
-                <label class="block text-[#000000] text-lg mb-2">تحديد الهدف</label>
-                <div class="flex gap-4">
-                    <input type="text" placeholder="سيارة، منزل، الخ..." 
-                           class="input-field pr-4">
-                    <button class="action-button">تحديد</button>
-                </div>
-            </div>
-
-            <!-- Add Goal -->
-            <div>
-                <label class="block text-black text-lg mb-2">اضافة هدف</label>
-                <div class="flex gap-4">
-                    <input type="text" placeholder="اضافة هدف اخر..." 
-                           class="input-field pr-4">
-                    <button class="action-button">اضافة</button>
-                </div>
+        <!-- Target Goal Section -->
+        <div class="input-container mb-4">
+            <label class="block text-[#2C8C00] text-lg mb-2">تحديد الهدف</label>
+            <div class="flex gap-4">
+                <input type="text" placeholder="ادخال المبلغ المستهدف" 
+                       class="input-field">
+                <button class="action-button">تحديد</button>
             </div>
         </div>
 
-        <!-- Logo at Bottom -->
-        <div class="text-center mt-12">
-            <img src="assets/logo.png" alt="الحصالة الإلكترونية" class="w-[250px] mx-auto mb-4">
+        <!-- Add Amount Section -->
+        <div class="input-container mb-4">
+            <label class="block text-[#2C8C00] text-lg mb-2">اضافة المبلغ</label>
+            <div class="flex gap-4">
+                <input type="text" placeholder="ادخل المبلغ المراد اضافته" 
+                       class="input-field">
+                <button class="action-button">اضافة</button>
+            </div>
+        </div>
+
+        <!-- Status Section -->
+        <div class="status-container">
+            <h2 class="text-[#2C8C00] text-lg mb-4">حالة الحصالة</h2>
+            <div class="flex justify-between mb-2">
+                <span>المبلغ الحالي:</span>
+                <span class="text-[#2C8C00]">270 ريال</span>
+            </div>
+            <div class="flex justify-between mb-2">
+                <span>المبلغ المتبقي:</span>
+                <span class="text-[#2C8C00]">730 ريال</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
         </div>
 
         <!-- Navigation Arrows -->
-        <div class="nav-arrow left" onclick="window.location.href='signup.html'"></div>
-        <div class="nav-arrow right" onclick="window.location.href='goal.html'"></div>
+        <div class="nav-arrow left"></div>
     </div>
+
+    <script>
+        // يمكن إضافة التفاعلات هنا
+        document.addEventListener('DOMContentLoaded', function() {
+            // مثال على تحديث شريط التقدم
+            const progressBar = document.querySelector('.progress-bar');
+            const currentAmount = 270;
+            const targetAmount = 1000;
+            const percentage = (currentAmount / targetAmount) * 100;
+            progressBar.style.width = percentage + '%';
+        });
+    </script>
 </body>
 </html>
